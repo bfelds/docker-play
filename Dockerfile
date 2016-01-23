@@ -6,4 +6,5 @@ RUN mkdir -p /opt/app && cp -a /tmp/node_modules /opt/app/
 
 ADD . /opt/app/
 
-CMD ["node", "/opt/app/app.js"]
+EXPOSE 3000
+CMD ["node", "/opt/app/bin/www"]
