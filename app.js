@@ -7,7 +7,14 @@ var bodyParser = require('body-parser');
 
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk('localhost:27017/nodetest1');
+console.log("monk attaching to ",
+  process.env.MONGODB_PORT_27017_TCP_ADDR + ":" +
+  process.env.MONGODB_PORT_27017_TCP_PORT +
+  '/test')
+var db = monk(
+  process.env.MONGODB_PORT_27017_TCP_ADDR + ":" +
+  process.env.MONGODB_PORT_27017_TCP_PORT +
+  '/test');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');

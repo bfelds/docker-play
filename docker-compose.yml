@@ -3,11 +3,11 @@ node-dev:
     build: .
     ports:
         - "3000:3000"
-    links: 
+    links:
         - mongo
     volumes:
-        - /Users/traveler/code/mongotest/data/db:/data/db/
-mongo: 
+        - /c/Users/ben/code/docker-play/data/db:/data/db/
+mongo:
     image: mongo
-    ports: 
+    ports:
         - "27017:27017"

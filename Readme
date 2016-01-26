@@ -2,4 +2,4 @@ building:
 docker build -t "node-dev" .
 
 running:
-docker run -it --rm node-dev
+docker run -d --rm node-dev
